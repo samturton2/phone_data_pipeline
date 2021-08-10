@@ -8,7 +8,7 @@ headers = ['country', 'phone_number']
 def populate_csv():
 
 	# Open input csv file and write over it
-	with open('/input.csv', 'w') as f:
+	with open('./input.csv', 'w') as f:
 		writer = csv.writer(f)
 
 		# insert headers
@@ -33,7 +33,7 @@ def populate_csv():
 
 def list_data():
 	num = int(input("how many rows? : "))
-	phone_numbers = pd.read_csv('/input.csv')
+	phone_numbers = pd.read_csv('./input.csv')
 	print(phone_numbers.head(num))
 
 if __name__ == '__main__':
