@@ -1,5 +1,6 @@
 import random as r
 import csv
+import pandas as pd
 
 countries = ['USA', 'UK', 'FRANCE', 'SPAIN']
 headers = ['country', 'phone_number']
@@ -22,15 +23,19 @@ def populate_csv():
 			
 			# create phone number string
 			ph_no = ''
-			ph_no.append(str(r.randint(6, 9)))
+			ph_no += str(r.randint(6, 9))
 			for i in range(1, 10):
-			    ph_no.append(str(r.randint(0, 9)))
+			    ph_no += str(r.randint(0, 9))
 			# write to temp data 
 			temp_data.append(ph_no)
 
 			writer.writerow(temp_data)
 
-
+def list_data():
+	num = int(input("how many rows? : "))
+	phone_numbers = pd.read_csv('/input.csv')
+	print(phone_numbers.head(num))
 
 if __name__ == '__main__':
 	populate_csv()
+	list_data()
