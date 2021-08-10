@@ -19,9 +19,6 @@ def randomise_num(ph_no):
 		return ph_no
 
 
-
-
-
 def populate_csv():
 
 	# Open input csv file and write over it
