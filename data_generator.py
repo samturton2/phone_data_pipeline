@@ -15,7 +15,7 @@ def randomise_num(ph_no):
 	elif r.randint(1,5)%3 == 0:
 		# Get in format XXXX-XXX-XXX
 		return f"{ph_no[0:4]}-{ph_no[4:7]}-{ph_no[7:]}"
-	else
+	else:
 		return ph_no
 
 
