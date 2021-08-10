@@ -43,7 +43,6 @@ def populate_csv():
 
 			# Randomise data
 			ph_no = randomise_num(ph_no)
-
 			# write to temp data 
 			temp_data.append(ph_no)
 
